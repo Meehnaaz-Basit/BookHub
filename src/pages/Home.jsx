@@ -4,13 +4,9 @@ const Home = () => {
   return (
     <div>
       <div className="hero min-h-[80vh] bg-[#F2F2F2] rounded-2xl">
-        <div className="hero-content flex-col lg:flex-row-reverse justify-evenly">
-          <img
-            src="./../../assets/banner-book.png"
-            className="max-w-sm basis-3/5"
-          />
-          <div className="basis-2/5 space-y-8">
-            <h1 className="text-5xl text-black font-bold leading-normal">
+        <div className="hero-content flex md:flex-row flex-col  justify-evenly lg:text-start text-center">
+          <div className="md:basis-2/5 space-y-8">
+            <h1 className="md:text-5xl text-3xl text-black font-bold leading-normal ">
               Book to freshen up your bookshelf
             </h1>
 
@@ -18,6 +14,10 @@ const Home = () => {
               View the List
             </Link>
           </div>
+          <img
+            src="./../../assets/banner-book.png"
+            className="max-w-sm md:basis-3/5"
+          />
         </div>
       </div>
     </div>
