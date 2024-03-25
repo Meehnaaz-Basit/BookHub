@@ -7,7 +7,7 @@ const MainLayout = () => {
       <div className="container mx-auto max-w-[1200px] w-[90%] lg-w[86%]">
         <Nav></Nav>
       </div>
-      <div>
+      <div className="container mx-auto max-w-[1200px] w-[90%] lg-w[86%]">
         <Outlet></Outlet>
       </div>
       {/* footer */}

@@ -42,7 +42,7 @@ const Nav = () => {
             </li>
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">Book Vibe</a>
+        <a className=" text-2xl font-bold">Book Vibe</a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 flex items-center gap-6">
@@ -81,8 +81,8 @@ const Nav = () => {
         </ul>
       </div>
       <div className="navbar-end flex gap-4">
-        <a className="btn">Sign In</a>
-        <a className="btn">Sign Up</a>
+        <a className="btn bg-green-500 text-white">Sign In</a>
+        <a className="btn bg-blue-400 text-white">Sign Up</a>
       </div>
     </div>
   );
