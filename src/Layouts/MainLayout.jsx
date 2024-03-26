@@ -1,5 +1,6 @@
 import { Outlet } from "react-router-dom";
 import Nav from "../Navbar/Nav";
+import { useState } from "react";
 
 const MainLayout = () => {
   return (

@@ -1,4 +1,6 @@
-import { useLoaderData, useParams } from "react-router-dom";
+import { useState } from "react";
+import { Link, useLoaderData, useParams } from "react-router-dom";
+import { saveBook } from "../utils";
 
 const Book = () => {
   const books = useLoaderData();
@@ -19,7 +21,12 @@ const Book = () => {
     tags,
   } = book;
 
-  // console.log(book);
+  // const [readBtn, setReadBtn] = useState([]);
+  const handleReadBook = (book) => {
+    saveBook(book);
+  };
+
+  // console.log(readBtn);
   return (
     <div className="flex justify-between items-center gap-20 my-16">
       <div className="basis-1/2">
@@ -81,6 +88,13 @@ const Book = () => {
             </div>
           </div>
           <div className="flex gap-6">
+            <button
+              onClick={() => handleReadBook(book)}
+              className="btn bg-transparent border-2"
+            >
+              Read
+            </button>
+
             <button className="btn bg-transparent border-2">Read</button>
             <button className="btn bg-blue-400 text-white">Wishlist</button>
           </div>
