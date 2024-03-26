@@ -5,7 +5,8 @@ import BookCart from "../components/BookCart";
 const Home = () => {
   const [books, setBooks] = useState([]);
   useEffect(() => {
-    fetch("../../public/books.json")
+    fetch("/data.json")
+      // fetch("https://meehnaaz-basit.github.io/books-json/books.json")
       .then((res) => res.json())
       .then((data) => setBooks(data));
   }, []);
@@ -33,7 +34,7 @@ const Home = () => {
         <h1 className="text-3xl text-center font-bold">Books</h1>
         <div className="grid grid-cols-3 gap-6 mt-8">
           {books.map((book) => (
-            <BookCart key={book.id} book={book}></BookCart>
+            <BookCart key={book.bookId} book={book}></BookCart>
           ))}
         </div>
       </div>

@@ -5,8 +5,11 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 import MainLayout from "./Layouts/MainLayout.jsx";
 import Home from "./pages/Home.jsx";
+import Book from "./components/Book.jsx";
 import ListedBooks from "./pages/ListedBooks";
 import PagesToRead from "./pages/PagesToRead";
+import ReadBook from "./components/ListedBook/ReadBook.jsx";
+import Wishlist from "./components/ListedBook/Wishlist.jsx";
 
 const router = createBrowserRouter([
   {
@@ -18,8 +21,24 @@ const router = createBrowserRouter([
         element: <Home></Home>,
       },
       {
+        path: "/book/:bookId",
+        element: <Book></Book>,
+
+        loader: () => fetch("/data.json"),
+      },
+      {
         path: "/listed-books",
         element: <ListedBooks></ListedBooks>,
+        children: [
+          {
+            path: "",
+            element: <ReadBook></ReadBook>,
+          },
+          {
+            path: "wishlist",
+            element: <Wishlist></Wishlist>,
+          },
+        ],
       },
       {
         path: "/pages-to-read",

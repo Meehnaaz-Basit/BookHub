@@ -1,10 +1,13 @@
 import { CiStar } from "react-icons/ci";
 import { Link } from "react-router-dom";
 const BookCart = ({ book }) => {
-  const { bookName, author, image, rating, category, tags } = book;
+  const { bookName, author, image, rating, category, tags, bookId } = book;
   // console.log(book, "bookcart");
   return (
-    <Link className="flex flex-col border-2 p-4 rounded-lg hover:shadow-xl transition-all m-2">
+    <Link
+      className="flex flex-col border-2 p-4 rounded-lg hover:shadow-xl transition-all m-2"
+      to={`/book/${bookId}`}
+    >
       <img alt="" className=" w-full h-52  object-contain" src={image} />
 
       <div className="flex flex-col flex-1 py-4 space-y-3">
