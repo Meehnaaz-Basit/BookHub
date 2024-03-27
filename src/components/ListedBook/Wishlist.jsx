@@ -1,7 +1,17 @@
+import { useEffect, useState } from "react";
+import Wish from "./Wish";
+import { getWish } from "../../utils";
 const Wishlist = () => {
+  const [books, setBooks] = useState([]);
+  useEffect(() => {
+    const storeBooks = getWish();
+    setBooks(storeBooks);
+  }, []);
   return (
     <div>
-      <h2>wishlist </h2>
+      {books.map((book) => (
+        <Wish book={book} key={book.bookId}></Wish>
+      ))}
     </div>
   );
 };

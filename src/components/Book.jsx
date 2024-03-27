@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useLoaderData, useParams } from "react-router-dom";
-import { saveBook } from "../utils";
+import { saveBook, saveWish } from "../utils";
 
 const Book = () => {
   const books = useLoaderData();
@@ -24,6 +24,9 @@ const Book = () => {
   // const [readBtn, setReadBtn] = useState([]);
   const handleReadBook = (book) => {
     saveBook(book);
+  };
+  const handleWishList = (book) => {
+    saveWish(book);
   };
 
   // console.log(readBtn);
@@ -96,7 +99,12 @@ const Book = () => {
             </button>
 
             <button className="btn bg-transparent border-2">Read</button>
-            <button className="btn bg-blue-400 text-white">Wishlist</button>
+            <button
+              onClick={() => handleWishList(book)}
+              className="btn bg-blue-400 text-white"
+            >
+              Wishlist
+            </button>
           </div>
         </div>
       </div>

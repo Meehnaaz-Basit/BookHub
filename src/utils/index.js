@@ -6,15 +6,35 @@ export const getBooks = () => {
   }
   return books;
 };
-
 // save
 export const saveBook = (book) => {
   let books = getBooks();
   const isExist = books.find((b) => b.bookId === book.bookId);
   if (isExist) {
-    return alert("Book already exists");
+    return alert("Book already exists in read");
   }
   books.push(book);
   localStorage.setItem("books", JSON.stringify(books));
-  alert("Book saved");
+  alert("Book marked as read");
+};
+//
+export const getWish = () => {
+  let wish = [];
+  const storedBooks = localStorage.getItem("wish");
+  if (storedBooks) {
+    wish = JSON.parse(storedBooks);
+  }
+  return wish;
+};
+
+//save wish
+export const saveWish = (book) => {
+  let wish = getWish();
+  const isExist = wish.find((b) => b.bookId === book.bookId);
+  if (isExist) {
+    return alert("Book already exists in wishlist");
+  }
+  wish.push(book);
+  localStorage.setItem("wish", JSON.stringify(wish));
+  alert("Book marked as wishlist");
 };
