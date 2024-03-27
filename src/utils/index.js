@@ -1,3 +1,6 @@
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 export const getBooks = () => {
   let books = [];
   const storedBooks = localStorage.getItem("books");
@@ -11,11 +14,12 @@ export const saveBook = (book) => {
   let books = getBooks();
   const isExist = books.find((b) => b.bookId === book.bookId);
   if (isExist) {
-    return alert("Book already exists in read");
+    toast.error("Book already exists in read");
+    return;
   }
   books.push(book);
   localStorage.setItem("books", JSON.stringify(books));
-  alert("Book marked as read");
+  toast.success("Book marked as read");
 };
 
 //
@@ -36,15 +40,17 @@ export const saveWish = (book) => {
   // Check if book is already marked as read
   const isRead = getBooks().find((b) => b.bookId === book.bookId);
   if (isRead) {
-    return alert(
+    toast.error(
       "Book is already marked as read. You cannot add it to the wishlist."
     );
+    return;
   }
   const isExist = wish.find((b) => b.bookId === book.bookId);
   if (isExist) {
-    return alert("Book already exists in wishlist");
+    toast.error("Book already exists in wishlist");
+    return;
   }
   wish.push(book);
   localStorage.setItem("wish", JSON.stringify(wish));
-  alert("Book marked as wishlist");
+  toast.success("Book marked as wishlist");
 };
