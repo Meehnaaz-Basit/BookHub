@@ -1,3 +1,5 @@
+import { Link, NavLink } from "react-router-dom";
+
 const Wish = ({ book }) => {
   const {
     image,
@@ -8,7 +10,7 @@ const Wish = ({ book }) => {
     category,
     tags,
     publisher,
-    yearOfPublishing,
+    bookId,
   } = book;
   return (
     <div className="border p-4 rounded-xl shadow my-12 flex items-center gap-8">
@@ -58,9 +60,12 @@ const Wish = ({ book }) => {
             </h2>
           </div>
           <div>
-            <button className="btn bg-green-600 text-white">
+            <NavLink
+              to={`/book/${bookId}`}
+              className="btn bg-green-600 text-white"
+            >
               View Details
-            </button>
+            </NavLink>
           </div>
         </div>
       </div>

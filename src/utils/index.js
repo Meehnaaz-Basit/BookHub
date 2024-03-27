@@ -6,7 +6,7 @@ export const getBooks = () => {
   }
   return books;
 };
-// save
+// save read
 export const saveBook = (book) => {
   let books = getBooks();
   const isExist = books.find((b) => b.bookId === book.bookId);
@@ -17,6 +17,9 @@ export const saveBook = (book) => {
   localStorage.setItem("books", JSON.stringify(books));
   alert("Book marked as read");
 };
+
+//
+
 //
 export const getWish = () => {
   let wish = [];
@@ -30,6 +33,13 @@ export const getWish = () => {
 //save wish
 export const saveWish = (book) => {
   let wish = getWish();
+  // Check if book is already marked as read
+  const isRead = getBooks().find((b) => b.bookId === book.bookId);
+  if (isRead) {
+    return alert(
+      "Book is already marked as read. You cannot add it to the wishlist."
+    );
+  }
   const isExist = wish.find((b) => b.bookId === book.bookId);
   if (isExist) {
     return alert("Book already exists in wishlist");
