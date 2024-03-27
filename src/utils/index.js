@@ -12,14 +12,21 @@ export const getBooks = () => {
 // save read
 export const saveBook = (book) => {
   let books = getBooks();
+
   const isExist = books.find((b) => b.bookId === book.bookId);
   if (isExist) {
     toast.error("Book already exists in read");
     return;
   }
+  // remove if the book is in the wishlist
+  const isInWishlist = getWish().find((b) => b.bookId === book.bookId);
+  if (isInWishlist) {
+    const updatedWishlist = getWish().filter((b) => b.bookId !== book.bookId);
+    localStorage.setItem("wish", JSON.stringify(updatedWishlist));
+    toast.info("Hooray! You've finally read a book from your wishlist 😊");
+  }
   books.push(book);
   localStorage.setItem("books", JSON.stringify(books));
-  toast.success("Book marked as read");
 };
 
 //
@@ -52,5 +59,5 @@ export const saveWish = (book) => {
   }
   wish.push(book);
   localStorage.setItem("wish", JSON.stringify(wish));
-  toast.success("Book marked as wishlist");
+  toast.success("Book marked to wishlist");
 };

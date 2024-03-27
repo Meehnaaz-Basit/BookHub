@@ -8,7 +8,7 @@ const ListedBooks = () => {
       <div className="text-center bg-gray-100 py-10 rounded-2xl text-3xl font-bold">
         <h2> Books </h2>
       </div>
-      <div className="text-center mt-5">
+      {/* <div className="text-center mt-5">
         <details className="dropdown">
           <summary className="m-1 btn bg-green-600 text-white font-bold text-base">
             Sort By
@@ -22,9 +22,9 @@ const ListedBooks = () => {
             </li>
           </ul>
         </details>
-      </div>
+      </div> */}
       {/* tab */}
-      <div className="flex items-center -mx-4 overflow-x-auto overflow-y-hidden sm:justify-start flex-nowrap  dark:text-gray-800 my-6">
+      <div className="flex items-center -mx-4 overflow-x-auto overflow-y-hidden sm:justify-start flex-nowrap  dark:text-gray-800 mt-24 my-6">
         <Link
           to=""
           onClick={() => setTab(0)}

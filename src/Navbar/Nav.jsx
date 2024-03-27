@@ -34,12 +34,6 @@ const Nav = () => {
             <li>
               <a>Pages To Read</a>
             </li>
-            <li>
-              <a>Item 1</a>
-            </li>
-            <li>
-              <a>Item 1</a>
-            </li>
           </ul>
         </div>
         <a className=" text-2xl font-bold">Book Vibe</a>
@@ -51,7 +45,7 @@ const Nav = () => {
             className={({ isActive }) =>
               isActive
                 ? "border-2 border-green-500 text-green-500 py-2 px-3 rounded-lg font-semibold"
-                : ""
+                : "border-2 border-transparent py-2 px-3  rounded-lg font-semibold"
             }
           >
             Home
@@ -61,7 +55,7 @@ const Nav = () => {
             className={({ isActive }) =>
               isActive
                 ? "border-2 border-green-500 text-green-500 py-2 px-3 rounded-lg font-semibold"
-                : ""
+                : "border-2 border-transparent py-2 px-3  rounded-lg font-semibold"
             }
           >
             Listed Books
@@ -71,13 +65,11 @@ const Nav = () => {
             className={({ isActive }) =>
               isActive
                 ? "border-2 border-green-500 text-green-500 py-2 px-3  rounded-lg font-semibold"
-                : ""
+                : "border-2 border-transparent py-2 px-3  rounded-lg font-semibold"
             }
           >
             Pages To Read
           </NavLink>
-          <NavLink to="/">Item 1</NavLink>
-          <NavLink to="/">Item 2</NavLink>
         </ul>
       </div>
       <div className="navbar-end flex gap-4">
