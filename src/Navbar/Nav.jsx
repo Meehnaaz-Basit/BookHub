@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
 const Nav = () => {
   return (
@@ -66,20 +66,20 @@ const Nav = () => {
               About Us
             </NavLink>
             <NavLink
-              to="/bookHub"
+              to="/faq"
               className={({ isActive }) =>
                 isActive
                   ? "border-2 border-green-500 text-green-500 py-2 px-3  rounded-lg font-semibold"
                   : "border-2 border-transparent py-2 px-3  rounded-lg font-semibold hover:border-green-500 hover:text-green-500 transition-all"
               }
             >
-              Get Published
+              FAQ
             </NavLink>
           </ul>
         </div>
-        <a className=" text-2xl font-bold">
-          Book <span className="text-green-500">Hub</span>
-        </a>
+        <Link to="/" className=" text-2xl font-bold ">
+          Book <span className="text-green-500 ">Hub</span>
+        </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 flex items-center gap-6">
@@ -124,14 +124,14 @@ const Nav = () => {
             About Us
           </NavLink>
           <NavLink
-            to="/bookHub"
+            to="/faq"
             className={({ isActive }) =>
               isActive
                 ? "border-2 border-green-500 text-green-500 py-2 px-3  rounded-lg font-semibold"
                 : "border-2 border-transparent py-2 px-3  rounded-lg font-semibold hover:border-green-500 hover:text-green-500 transition-all"
             }
           >
-            Get Published
+            FAQ
           </NavLink>
         </ul>
       </div>

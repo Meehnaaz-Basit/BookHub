@@ -5,7 +5,7 @@ import BookCart from "../components/BookCart";
 const Home = () => {
   const [books, setBooks] = useState([]);
   useEffect(() => {
-    fetch("/data.json")
+    fetch("./data.json")
       // fetch("https://meehnaaz-basit.github.io/books-json/books.json")
       .then((res) => res.json())
       .then((data) => setBooks(data));
