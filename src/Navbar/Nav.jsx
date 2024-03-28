@@ -66,7 +66,9 @@ const Nav = () => {
             </NavLink>
           </ul>
         </div>
-        <a className=" text-2xl font-bold">Book Vibe</a>
+        <a className=" text-2xl font-bold">
+          Book <span className="text-green-500">Hub</span>
+        </a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 flex items-center gap-6">
@@ -101,6 +103,16 @@ const Nav = () => {
             Pages To Read
           </NavLink>
           <NavLink
+            to="/about-us"
+            className={({ isActive }) =>
+              isActive
+                ? "border-2 border-green-500 text-green-500 py-2 px-3  rounded-lg font-semibold"
+                : "border-2 border-transparent py-2 px-3  rounded-lg font-semibold hover:border-green-500 hover:text-green-500 transition-all"
+            }
+          >
+            About Us
+          </NavLink>
+          <NavLink
             to="/bookHub"
             className={({ isActive }) =>
               isActive
@@ -108,7 +120,7 @@ const Nav = () => {
                 : "border-2 border-transparent py-2 px-3  rounded-lg font-semibold hover:border-green-500 hover:text-green-500 transition-all"
             }
           >
-            BookHub
+            Get Published
           </NavLink>
         </ul>
       </div>

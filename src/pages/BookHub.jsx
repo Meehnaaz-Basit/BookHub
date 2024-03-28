@@ -1,4 +1,9 @@
 const BookHub = () => {
+  const handleSubmitForm = () => {
+    event.preventDefault();
+    // console.log("submit");
+    // alert("Submit");
+  };
   return (
     <div>
       <div className="text-center bg-gray-100 py-10 rounded-2xl text-3xl font-bold space-y-4">
@@ -14,9 +19,9 @@ const BookHub = () => {
       <div>
         <h2>Submit Your Manuscript</h2>
         {/*  */}
-        <div className="my-10">
+        <form className="my-10">
           <section className="p-6 bg-green-200 text-gray-900">
-            <form className="container flex flex-col mx-auto space-y-12">
+            <div className="container flex flex-col mx-auto space-y-12">
               <fieldset className="grid grid-cols-4 gap-6 p-6 rounded-md shadow-sm bg-green-100">
                 <div className="space-y-2 col-span-full lg:col-span-1">
                   <p className="font-medium">Author Information:</p>
@@ -31,6 +36,7 @@ const BookHub = () => {
                       type="text"
                       placeholder="First name"
                       className="w-full rounded-md text-gray-700 p-3"
+                      required
                     />
                   </div>
 
@@ -43,6 +49,7 @@ const BookHub = () => {
                       type="email"
                       placeholder="Email"
                       className="w-full rounded-md text-gray-700 p-3"
+                      required
                     />
                   </div>
 
@@ -55,6 +62,7 @@ const BookHub = () => {
                       type="text"
                       placeholder="Dhaka"
                       className="w-full rounded-md text-gray-700 p-3"
+                      required
                     />
                   </div>
                   <div className="col-span-full sm:col-span-3">
@@ -66,6 +74,7 @@ const BookHub = () => {
                       type="number"
                       placeholder="+880"
                       className="w-full rounded-md text-gray-700 p-3"
+                      required
                     />
                   </div>
                 </div>
@@ -84,6 +93,7 @@ const BookHub = () => {
                       type="text"
                       placeholder="Book Title"
                       className="w-full rounded-md text-gray-700 p-3 "
+                      required
                     />
                   </div>
 
@@ -96,6 +106,7 @@ const BookHub = () => {
                       type="text"
                       placeholder="Category"
                       className="w-full rounded-md text-gray-700 p-3"
+                      required
                     />
                   </div>
                   <div className="col-span-full sm:col-span-4">
@@ -107,6 +118,7 @@ const BookHub = () => {
                       type="text"
                       placeholder="Brief Synopsis or Summary of Your Book"
                       className="w-full rounded-md text-gray-700 p-3"
+                      required
                     />
                   </div>
                   <div className="col-span-full sm:col-span-2">
@@ -123,9 +135,18 @@ const BookHub = () => {
                   </div>
                 </div>
               </fieldset>
-            </form>
+              <div className="text-center">
+                <button
+                  //   onClick={() => handleSubmitForm()}
+                  type="submit"
+                  className="py-2 px-4 rounded-full bg-green-500 text-white inline-flex font-bold text-lg"
+                >
+                  Submit
+                </button>
+              </div>
+            </div>
           </section>
-        </div>
+        </form>
         {/*  */}
       </div>
     </div>
