@@ -25,15 +25,6 @@ const Nav = () => {
             tabIndex={0}
             className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
           >
-            {/* <li>
-              <a>Home</a>
-            </li>
-            <li>
-              <a>Listed Books</a>
-            </li>
-            <li>
-              <a>Pages To Read</a>
-            </li> */}
             <NavLink
               to="/"
               className={({ isActive }) =>
@@ -63,6 +54,26 @@ const Nav = () => {
               }
             >
               Pages To Read
+            </NavLink>
+            <NavLink
+              to="/about-us"
+              className={({ isActive }) =>
+                isActive
+                  ? "border-2 border-green-500 text-green-500 py-2 px-3  rounded-lg font-semibold"
+                  : "border-2 border-transparent py-2 px-3  rounded-lg font-semibold hover:border-green-500 hover:text-green-500 transition-all"
+              }
+            >
+              About Us
+            </NavLink>
+            <NavLink
+              to="/bookHub"
+              className={({ isActive }) =>
+                isActive
+                  ? "border-2 border-green-500 text-green-500 py-2 px-3  rounded-lg font-semibold"
+                  : "border-2 border-transparent py-2 px-3  rounded-lg font-semibold hover:border-green-500 hover:text-green-500 transition-all"
+              }
+            >
+              Get Published
             </NavLink>
           </ul>
         </div>

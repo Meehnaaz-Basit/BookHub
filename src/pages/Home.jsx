@@ -25,7 +25,7 @@ const Home = () => {
             </Link>
           </div>
           <img
-            src="./../../assets/banner-book.png"
+            src="https://i.ibb.co/QXs84df/banner-book.png"
             className="lg:max-w-sm w-7/12 md:basis-3/5"
           />
         </div>

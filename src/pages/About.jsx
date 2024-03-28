@@ -27,7 +27,7 @@ const About = () => {
         <div className="container mx-auto space-y-12">
           <div className="flex flex-col overflow-hidden items-center lg:flex-row-reverse gap-6">
             <img
-              src="https://source.unsplash.com/640x480/?2"
+              src="https://i.ibb.co/GR5b294/Library-by-Andrew-Martin-Multi-Wallpaper-Wallpaper-Direct.jpg"
               alt=""
               className="h-80  aspect-video rounded-md"
             />
@@ -45,7 +45,7 @@ const About = () => {
           </div>
           <div className="flex flex-col overflow-hidden items-center  lg:flex-row gap-6">
             <img
-              src="https://source.unsplash.com/640x480/?3"
+              src="https://i.ibb.co/fG5NR6w/pexels-fauxels-3183183.jpg"
               alt=""
               className="h-80  aspect-video rounded-md"
             />
@@ -91,21 +91,16 @@ const About = () => {
       <section className="py-6  text-black mb-6">
         <div className="container p-4 mx-auto space-y-16 sm:p-10">
           <div className="space-y-4 ">
-            <h3 className="text-2xl font-bold leading-none sm:text-5xl text-green-500">
+            <h3 className="text-2xl font-bold leading-none text-center sm:text-5xl text-green-500">
               Meet our team
             </h3>
-            <p className="max-w-2xl text-gray-400">
-              At a assumenda quas cum earum ut itaque commodi saepe rem
-              aspernatur quam natus quis nihil quod, hic explicabo doloribus
-              magnam neque, exercitationem eius sunt!
-            </p>
           </div>
           <div className="grid w-full grid-cols-1 gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-4">
             <div className="space-y-4 border-green-500 border-2 rounded-2xl px-4 py-8 hover:shadow-xl hover:text-green-500 transition-all">
               <img
                 alt=""
                 className="object-cover h-56 mx-auto mb-4 bg-center rounded-sm bg-gray-500"
-                src="https://source.unsplash.com/240x320/?portrait?4"
+                src="https://i.ibb.co/T8z5kqg/pexels-mikhail-nilov-8872784.jpg"
               />
               <div className="flex flex-col items-center">
                 <h4 className="text-xl font-semibold">Leroy Jenkins</h4>
@@ -164,7 +159,7 @@ const About = () => {
               <img
                 alt=""
                 className="object-cover h-56 mx-auto mb-4 bg-center rounded-sm bg-gray-500"
-                src="https://source.unsplash.com/240x320/?portrait?4"
+                src="https://i.ibb.co/tDrf8mJ/pexels-daniel-ursache-8289271.jpg"
               />
               <div className="flex flex-col items-center">
                 <h4 className="text-xl font-semibold">Leroy Jenkins</h4>
@@ -222,7 +217,7 @@ const About = () => {
               <img
                 alt=""
                 className="object-cover h-56 mx-auto mb-4 bg-center rounded-sm bg-gray-500"
-                src="https://source.unsplash.com/240x320/?portrait?4"
+                src="https://i.ibb.co/6cSMHGg/pexels-picha-stock-3894379.jpg"
               />
               <div className="flex flex-col items-center">
                 <h4 className="text-xl font-semibold">Leroy Jenkins</h4>
@@ -280,7 +275,7 @@ const About = () => {
               <img
                 alt=""
                 className="object-cover h-56 mx-auto mb-4 bg-center rounded-sm bg-gray-500"
-                src="https://source.unsplash.com/240x320/?portrait?5"
+                src="https://i.ibb.co/Jc8cZVY/pexels-mikhail-nilov-9304782.jpg"
               />
               <div className="flex flex-col items-center">
                 <h4 className="text-xl font-semibold">Leroy Jenkins</h4>
