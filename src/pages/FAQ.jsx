@@ -23,7 +23,7 @@ const FAQ = () => {
                 </summary>
                 <p className="px-4 py-6 pt-0 ml-4 -mt-4 dark:text-gray-600">
                   BookHub publishes a diverse range of genres including fiction,
-                  non-fiction, memoirs, poetry, children's books, and more. We
+                  non-fiction, memoirs, poetry, children books, and more. We
                   strive to showcase a variety of voices and perspectives in
                   literature.
                 </p>
@@ -68,9 +68,9 @@ const FAQ = () => {
                 </summary>
                 <p className="px-4 py-6 pt-0 ml-4 -mt-4 dark:text-gray-600">
                   If you have any additional questions or need further
-                  assistance, please don't hesitate to contact our support team.
-                  You can reach us via email at contact@business.com or through
-                  our contact form on the website.
+                  assistance, please do not hesitate to contact our support
+                  team. You can reach us via email at contact@business.com or
+                  through our contact form on the website.
                 </p>
               </details>
             </div>

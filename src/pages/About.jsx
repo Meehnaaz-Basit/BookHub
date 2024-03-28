@@ -13,7 +13,7 @@ const About = () => {
           <div className="max-w-4xl">
             <h1 className="mb-5 text-5xl font-bold">ABOUT US</h1>
             <p className="mb-5">
-              At BookHub, we're passionate about literature and dedicated to
+              At BookHub, we are passionate about literature and dedicated to
               fostering a love of reading and writing in communities worldwide.
               Our platform serves as a bridge between authors and readers,
               offering a diverse array of books and resources to explore and
@@ -38,7 +38,7 @@ const About = () => {
               <p className="my-6 text-gray-600">
                 Our mission is simple: to connect authors with readers and
                 provide a platform where literary dreams can flourish. Whether
-                you're an established writer or an emerging talent, BookHub is
+                you are an established writer or an emerging talent, BookHub is
                 here to support you on your journey to publication and beyond.
               </p>
             </div>
@@ -60,7 +60,7 @@ const About = () => {
                     Publishing Opportunities:
                   </span>{" "}
                   We provide a range of publishing options tailored to meet the
-                  unique needs of each author, whether it's traditional
+                  unique needs of each author, whether it is traditional
                   publishing, self-publishing assistance, or expert guidance
                   from our team.
                 </li>
@@ -341,8 +341,8 @@ const About = () => {
                 Our Client Says
               </h2>
               <p className="text-gray-400">
-                Discover the success stories straight from our clients' mouths.
-                At BookHub, we're proud to offer unparalleled publishing
+                Discover the success stories straight from our clients mouths.
+                At BookHub, we are proud to offer unparalleled publishing
                 services that leave our authors thrilled. Take a look at what
                 they have to say about their experiences with us
               </p>
@@ -353,8 +353,8 @@ const About = () => {
                   <div className="p-6 rounded shadow-md bg-green-300">
                     <p>
                       Working with BookHub was a game-changer for me! Their
-                      team's expertise and guidance helped me navigate the
-                      publishing process with ease. I couldn't be happier with
+                      teams expertise and guidance helped me navigate the
+                      publishing process with ease. I could not be happier with
                       the results!
                     </p>
                     <div className="flex items-center mt-4 space-x-4">
@@ -411,10 +411,10 @@ const About = () => {
                   </div>
                   <div className="p-6 rounded shadow-md md:bg-green-300 bg-green-100">
                     <p>
-                      I've been a part of the BookHub community for years, and
-                      I've always been impressed by their commitment to
+                      I have been a part of the BookHub community for years, and
+                      I have always been impressed by their commitment to
                       promoting diverse voices and supporting emerging talent.
-                      It's been an honor to work with them, and I look forward
+                      It is been an honor to work with them, and I look forward
                       to our continued partnership.
                     </p>
                     <div className="flex items-center mt-4 space-x-4">
@@ -484,10 +484,7 @@ const About = () => {
               </p>
             </div>
           </div>
-          <form
-            novalidate=""
-            className="flex flex-col py-6 space-y-6 md:py-0 md:px-6"
-          >
+          <form className="flex flex-col py-6 space-y-6 md:py-0 md:px-6">
             <label className="block">
               <span className="mb-1">Full name</span>
               <input

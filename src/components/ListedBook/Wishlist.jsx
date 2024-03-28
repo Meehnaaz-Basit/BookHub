@@ -21,7 +21,6 @@ const Wishlist = () => {
       } else if (sortBy === "Published year") {
         return b.yearOfPublishing - a.yearOfPublishing;
       } else {
-        // Default
         return 0;
       }
     });
@@ -54,9 +53,16 @@ const Wishlist = () => {
         </details>
       </div>
       <div>
-        {books.map((book) => (
+        {/* {books.map((book) => (
           <Wish book={book} key={book.bookId}></Wish>
-        ))}
+        ))} */}
+        {books.length === 0 ? (
+          <p className="text-center text-2xl text-gray-500 mt-8 py-10 bg-gray-100 rounded-xl my-8">
+            No books in wishlist
+          </p>
+        ) : (
+          books.map((book) => <Wish book={book} key={book.bookId}></Wish>)
+        )}
       </div>
     </div>
   );

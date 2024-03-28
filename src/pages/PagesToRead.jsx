@@ -1,4 +1,12 @@
-import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid } from "recharts";
+import {
+  BarChart,
+  Bar,
+  Cell,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  ResponsiveContainer,
+} from "recharts";
 import { getBooks } from "../utils";
 // Custom shape function
 const getPath = (x, y, width, height) => {
@@ -49,31 +57,33 @@ const PagesToRead = () => {
   }));
 
   return (
-    <BarChart
-      width={1200}
-      height={600}
-      data={chartData}
-      margin={{
-        top: 20,
-        right: 30,
-        left: 20,
-        bottom: 5,
-      }}
-    >
-      <CartesianGrid strokeDasharray="3 3" />
-      <XAxis dataKey="name" />
-      <YAxis />
-      <Bar
-        dataKey="pages"
-        fill="#8884d8"
-        shape={<TriangleBar />}
-        label={{ position: "top" }}
+    <div>
+      <BarChart
+        width={1200}
+        height={600}
+        data={chartData}
+        margin={{
+          top: 20,
+          right: 30,
+          left: 20,
+          bottom: 5,
+        }}
       >
-        {chartData.map((entry, index) => (
-          <Cell key={`cell-${index}`} fill={colors[index % 20]} />
-        ))}
-      </Bar>
-    </BarChart>
+        <CartesianGrid strokeDasharray="3 3" />
+        <XAxis dataKey="name" />
+        <YAxis />
+        <Bar
+          dataKey="pages"
+          fill="#8884d8"
+          shape={<TriangleBar />}
+          label={{ position: "top" }}
+        >
+          {chartData.map((entry, index) => (
+            <Cell key={`cell-${index}`} fill={colors[index % 20]} />
+          ))}
+        </Bar>
+      </BarChart>
+    </div>
   );
 };
 

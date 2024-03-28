@@ -1,5 +1,6 @@
-import { Link, NavLink } from "react-router-dom";
-
+import { NavLink } from "react-router-dom";
+import { IoPersonOutline } from "react-icons/io5";
+import { MdOutlineFindInPage } from "react-icons/md";
 const Wish = ({ book }) => {
   const {
     image,
@@ -11,6 +12,7 @@ const Wish = ({ book }) => {
     tags,
     publisher,
     bookId,
+    yearOfPublishing,
   } = book;
   return (
     <div className="border p-4 rounded-xl shadow my-12 flex md:flex-row flex-col items-center gap-8">
@@ -37,14 +39,22 @@ const Wish = ({ book }) => {
           </div>
         </div>
         <div className="flex md:flex-row flex-col lg:gap-5 gap-3">
-          <div>
+          <div className="flex items-center gap-2">
+            <IoPersonOutline />
             <h2>
               Publisher: <span className="font-semibold">{publisher}</span>
             </h2>
           </div>
-          <div>
+          <div className="flex items-center gap-2">
+            <MdOutlineFindInPage />
             <h2>
               Page: <span className="font-semibold">{totalPages}</span>
+            </h2>
+          </div>
+          <div>
+            <h2>
+              Year Of Publishing:{" "}
+              <span className="font-semibold">{yearOfPublishing}</span>
             </h2>
           </div>
         </div>

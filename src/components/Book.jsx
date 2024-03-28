@@ -1,5 +1,4 @@
-import { useState } from "react";
-import { Link, useLoaderData, useParams } from "react-router-dom";
+import { useLoaderData, useParams } from "react-router-dom";
 import { saveBook, saveWish } from "../utils";
 
 const Book = () => {
