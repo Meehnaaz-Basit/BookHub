@@ -13,7 +13,7 @@ const Wish = ({ book }) => {
     bookId,
   } = book;
   return (
-    <div className="border p-4 rounded-xl shadow my-12 flex items-center gap-8">
+    <div className="border p-4 rounded-xl shadow my-12 flex md:flex-row flex-col items-center gap-8">
       <div>
         <img className="w-40" src={image} alt="" />
       </div>
@@ -22,21 +22,21 @@ const Wish = ({ book }) => {
         <p>
           By : <span className="font-semibold"> {author} </span>
         </p>
-        <div className="flex items-center gap-4">
+        <div className="flex items-center lg:gap-4 gap-2">
           <p className="font-semibold">Tag</p>
 
           <div>
             {tags.map((tag, index) => (
               <span
                 key={index}
-                className="text-green-600 bg-green-100 py-2 px-4 pt-1 mr-2 font-semibold rounded-3xl"
+                className="text-green-600 bg-green-100 py-2 lg:px-4 px-2 lg:text-base text-sm pt-1 mr-2 font-semibold rounded-3xl"
               >
                 {tag}
               </span>
             ))}
           </div>
         </div>
-        <div className="flex gap-5">
+        <div className="flex md:flex-row flex-col lg:gap-5 gap-3">
           <div>
             <h2>
               Publisher: <span className="font-semibold">{publisher}</span>
@@ -48,7 +48,7 @@ const Wish = ({ book }) => {
             </h2>
           </div>
         </div>
-        <div className="flex items-center gap-4">
+        <div className="flex md:flex-row flex-col items-center gap-4">
           <div className="bg-blue-100 text-blue-600 py-1 px-4 rounded-3xl">
             <h2>
               Category: <span>{category}</span>

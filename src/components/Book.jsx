@@ -31,9 +31,9 @@ const Book = () => {
 
   // console.log(readBtn);
   return (
-    <div className="flex justify-between items-center gap-20 my-16">
-      <div className="basis-1/2">
-        <img className="" src={image} alt="" />
+    <div className="flex lg:flex-row flex-col justify-between items-center gap-20 my-16">
+      <div className="basis-1/2 ">
+        <img className="lg:w-auto w-7/12 mx-auto" src={image} alt="" />
       </div>
       <div className="basis-1/2">
         <div className="space-y-5">
@@ -93,12 +93,11 @@ const Book = () => {
           <div className="flex gap-6">
             <button
               onClick={() => handleReadBook(book)}
-              className="btn bg-transparent border-2"
+              className="btn bg-transparent border-2 hover:bg-green-500 hover:text-white hover:border-green-500"
             >
               Read
             </button>
 
-            <button className="btn bg-transparent border-2">Read</button>
             <button
               onClick={() => handleWishList(book)}
               className="btn bg-blue-400 text-white"

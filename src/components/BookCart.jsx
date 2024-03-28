@@ -10,8 +10,9 @@ const BookCart = ({ book }) => {
       className="flex flex-col border-2 p-4 rounded-lg hover:shadow-xl transition-all m-2"
       to={`/book/${bookId}`}
     >
-      <img alt="" className=" w-full h-52  object-contain" src={image} />
-
+      <div>
+        <img alt="" className=" w-full h-52  object-contain" src={image} />
+      </div>
       <div className="flex flex-col flex-1 py-4 space-y-3">
         <div>
           {tags.map((tag, index) => (

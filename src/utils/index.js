@@ -18,15 +18,18 @@ export const saveBook = (book) => {
     toast.error("Book already exists in read");
     return;
   }
+
   // remove if the book is in the wishlist
-  const isInWishlist = getWish().find((b) => b.bookId === book.bookId);
+  const wishList = getWish();
+  const isInWishlist = wishList.find((b) => b.bookId === book.bookId);
   if (isInWishlist) {
-    const updatedWishlist = getWish().filter((b) => b.bookId !== book.bookId);
+    const updatedWishlist = wishList.filter((b) => b.bookId !== book.bookId);
     localStorage.setItem("wish", JSON.stringify(updatedWishlist));
     toast.info("Hooray! You've finally read a book from your wishlist 😊");
   }
   books.push(book);
   localStorage.setItem("books", JSON.stringify(books));
+  toast.success("Book marked as read");
 };
 
 //

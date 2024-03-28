@@ -11,6 +11,7 @@ import PagesToRead from "./pages/PagesToRead";
 import ReadBook from "./components/ListedBook/ReadBook.jsx";
 import Wishlist from "./components/ListedBook/Wishlist.jsx";
 import NotFound from "./pages/NotFound.jsx";
+import BookHub from "./pages/BookHub.jsx";
 
 const router = createBrowserRouter([
   {
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
       {
         path: "/pages-to-read",
         element: <PagesToRead></PagesToRead>,
+      },
+      {
+        path: "/bookHub",
+        element: <BookHub></BookHub>,
       },
       {
         path: "*",

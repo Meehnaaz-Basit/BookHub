@@ -25,7 +25,7 @@ const Nav = () => {
             tabIndex={0}
             className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
           >
-            <li>
+            {/* <li>
               <a>Home</a>
             </li>
             <li>
@@ -33,7 +33,37 @@ const Nav = () => {
             </li>
             <li>
               <a>Pages To Read</a>
-            </li>
+            </li> */}
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                isActive
+                  ? "border-2 border-green-500 text-green-500 py-2 px-3 rounded-lg font-semibold"
+                  : "border-2 border-transparent py-2 px-3  rounded-lg font-semibold hover:border-green-500 hover:text-green-500 transition-all"
+              }
+            >
+              Home
+            </NavLink>
+            <NavLink
+              to="/listed-books"
+              className={({ isActive }) =>
+                isActive
+                  ? "border-2 border-green-500 text-green-500 py-2 px-3 rounded-lg font-semibold"
+                  : "border-2 border-transparent py-2 px-3  rounded-lg font-semibold hover:border-green-500 hover:text-green-500 transition-all"
+              }
+            >
+              Listed Books
+            </NavLink>
+            <NavLink
+              to="/pages-to-read"
+              className={({ isActive }) =>
+                isActive
+                  ? "border-2 border-green-500 text-green-500 py-2 px-3  rounded-lg font-semibold"
+                  : "border-2 border-transparent py-2 px-3  rounded-lg font-semibold hover:border-green-500 hover:text-green-500 transition-all"
+              }
+            >
+              Pages To Read
+            </NavLink>
           </ul>
         </div>
         <a className=" text-2xl font-bold">Book Vibe</a>
@@ -45,7 +75,7 @@ const Nav = () => {
             className={({ isActive }) =>
               isActive
                 ? "border-2 border-green-500 text-green-500 py-2 px-3 rounded-lg font-semibold"
-                : "border-2 border-transparent py-2 px-3  rounded-lg font-semibold"
+                : "border-2 border-transparent py-2 px-3  rounded-lg font-semibold hover:border-green-500 hover:text-green-500 transition-all"
             }
           >
             Home
@@ -55,7 +85,7 @@ const Nav = () => {
             className={({ isActive }) =>
               isActive
                 ? "border-2 border-green-500 text-green-500 py-2 px-3 rounded-lg font-semibold"
-                : "border-2 border-transparent py-2 px-3  rounded-lg font-semibold"
+                : "border-2 border-transparent py-2 px-3  rounded-lg font-semibold hover:border-green-500 hover:text-green-500 transition-all"
             }
           >
             Listed Books
@@ -65,10 +95,20 @@ const Nav = () => {
             className={({ isActive }) =>
               isActive
                 ? "border-2 border-green-500 text-green-500 py-2 px-3  rounded-lg font-semibold"
-                : "border-2 border-transparent py-2 px-3  rounded-lg font-semibold"
+                : "border-2 border-transparent py-2 px-3  rounded-lg font-semibold hover:border-green-500 hover:text-green-500 transition-all"
             }
           >
             Pages To Read
+          </NavLink>
+          <NavLink
+            to="/bookHub"
+            className={({ isActive }) =>
+              isActive
+                ? "border-2 border-green-500 text-green-500 py-2 px-3  rounded-lg font-semibold"
+                : "border-2 border-transparent py-2 px-3  rounded-lg font-semibold hover:border-green-500 hover:text-green-500 transition-all"
+            }
+          >
+            BookHub
           </NavLink>
         </ul>
       </div>

@@ -26,13 +26,13 @@ const Home = () => {
           </div>
           <img
             src="./../../assets/banner-book.png"
-            className="max-w-sm md:basis-3/5"
+            className="lg:max-w-sm w-7/12 md:basis-3/5"
           />
         </div>
       </div>
       <div className="my-8 py-8">
         <h1 className="text-3xl text-center font-bold">Books</h1>
-        <div className="grid grid-cols-3 gap-6 mt-8">
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 mt-8">
           {books.map((book) => (
             <BookCart key={book.bookId} book={book}></BookCart>
           ))}
