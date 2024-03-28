@@ -1,17 +1,16 @@
-import React from "react";
 import { Link } from "react-router-dom";
 
 const NotFound = () => {
   return (
     <div>
-      <div className="flex justify-center items-center h-[60vh]">
+      <div className="flex justify-center items-center">
         <img
           className="w-96 mx-auto"
-          src="../../assets/7938322_3814347.svg"
+          src="https://i.ibb.co/nM8XYRK/7938319-3814263.jpg"
           alt=""
         />
       </div>
-      <div className="text-center">
+      <div className="text-center mb-20">
         <p className="text-xl font-semibold mb-6">Url not found !</p>
         <Link
           to="/"
